@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/history/history.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Rubik:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/assets/coffee.png" />
+    <title>History Customer</title>
+  </head>
+  <body>
+    <header class="nav-pc">
+      <div class="navBrand">
+        <a href="/index.html">
+          <img src="/assets/coffee.png" alt="" />
+        </a>
+        <p>Coffee Shop</p>
+      </div>
+      <div class="navList">
+        <ul>
+          <a
+            href="/HomePage/homepage.html"
+            style="text-decoration: none; color: #4f5665"
+          >
+            <li class="nav-text">Home</li>
+          </a>
+          <a
+            href="/product/product.html"
+            style="text-decoration: none; color: #4f5665"
+          >
+            <li class="product">Product</li>
+          </a>
+          <a href="#" style="text-decoration: none; color: #4f5665">
+            <li class="nav-text">Your Cart</li>
+          </a>
+          <a href="#" style="text-decoration: none; color: #4f5665">
+            <li class="nav-text">History</li>
+          </a>
+        </ul>
+      </div>
+      <div class="Nav-Search">
+        <i
+          class="fa-solid fa-magnifying-glass"
+          style="margin-left: 5px; margin-top: 1px"
+        ></i>
+        <input class="search" placeholder="Search" />
+      </div>
+      <div class="navSide">
+        <a href="/product/product.html"
+          ><img class="nav-chat" src="/assets/chat.png" alt=""
+        /></a>
+        <a href="/profile/profile.html"
+          ><img class="nav-profile" src="/assets/image 39.png" alt=""
+        /></a>
+        <div class="content">
+          <p>1</p>
+        </div>
+      </div>
+      <div class="burger">
+        <img src="/assets/burger-menu.svg" alt="" width="30px" height="30px" />
+      </div>
+    </header>
+
+    <main>
+      <section class="modal" id="modal">
+        <div class="modal-content" id="modal-content">
+          <p class="text">
+            Are you sure want to delete <br />
+            the selected items?
+          </p>
+          <div class="button-modal">
+            <button class="cancel" id="cancel">Cancel</button>
+            <button class="ok" id="ok">Delete</button>
+          </div>
+        </div>
+      </section>
+      <div class="head">
+        <p class="upperText">Let’s see what you have bought!</p>
+        <p class="botText">Long press to delete item</p>
+      </div>
+
+      <div class="grid-hist">
+        <div class="card" id="card">
+          <div class="img">
+            <div class="img-content">
+              <img src="/assets/food1.png" alt="" />
+            </div>
+          </div>
+          <div class="text-card">
+            <div class="name">
+              <p>Veggie tomato mix</p>
+            </div>
+            <div class="price">
+              <p>IDR 34.000</p>
+            </div>
+            <div class="deliver">
+              <p>Delivered</p>
+            </div>
+          </div>
+          <div class="click-delete">
+            <div class="delete">
+              <img src="/assets/delete.png" alt="" />
+            </div>
+            <div class="close"><p>&times;</p></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-container">
+      <div class="left-foot-content">
+        <div class="logo-detail">
+          <img
+            src="/assets/coffee.png"
+            alt=""
+            class="coffee"
+            width="30"
+            height="33"
+          />
+          <p>Coffee Shop</p>
+        </div>
+        <p class="about-detail">
+          Coffee Shop is a store that sells some good <br />
+          meals, and especially coffee. We provide <br />
+          high quality beans
+        </p>
+        <div class="sosmed-detail">
+          <div class="box">
+            <div class="back-logo"></div>
+            <img class="img-logo" src="/assets/facebook.png" alt="" />
+          </div>
+          <div class="box">
+            <div class="back-logo"></div>
+            <img class="img-logo" src="/assets/twitter.png" alt="" />
+          </div>
+          <div class="box">
+            <div class="back-logo"></div>
+            <img class="img-logo" src="/assets/instagram.png" alt="" />
+          </div>
+        </div>
+        <p class="copyright">©2022 CoffeeStore</p>
+      </div>
+      <div class="right-foot-content">
+        <div class="content-detail">
+          <h2>Product</h2>
+          <ol>
+            <li>Download</li>
+            <li>Pricing</li>
+            <li>Locations</li>
+            <li>Contries</li>
+            <li>Blog</li>
+          </ol>
+        </div>
+        <div class="content-detail">
+          <h2>Engage</h2>
+          <ol>
+            <li>Coffee Shop ?</li>
+            <li>FAQ</li>
+            <li>About Us</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+          </ol>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="/history/history.js"></script>
+</html>

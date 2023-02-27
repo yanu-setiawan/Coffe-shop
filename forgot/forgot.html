@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/assets/coffee.png" type="image/x-icon" />
+    <title>Forgot Password - Coffee Shop</title>
+    <link rel="stylesheet" href="forgot.css" />
+  </head>
+  <body>
+    <main>
+      <section class="modal" id="modal">
+        <div class="modal-content" id="modal-content">
+          <img src="../assets/succes.png" alt="" />
+          <p class="succes-text">Kode verifikasi telah dikirm pada email :</p>
+          <p class="greeting" id="greeting"></p>
+          <button class="ok" id="ok">OK</button>
+        </div>
+      </section>
+      <section class="container-fluid jumbotron">
+        <div class="text">
+          <p class="title">Forgot your password?</p>
+          <p class="description">Don’t worry, we got your back!</p>
+        </div>
+        <form
+          id="form"
+          onsubmit="event.preventDefault();
+          validateForm();"
+        >
+          <div class="form-input">
+            <input
+              id="email"
+              class="email"
+              type="text"
+              placeholder="Enter your email adress to get link"
+            />
+            <button type="submit" class="btn btn-send">Send</button> <br />
+            <span class="error" id=" email-error">
+              <p class="error-text" id="errText"></p>
+            </span>
+          </div>
+        </form>
+
+        <div class="bottom">
+          <p class="waiting">
+            Click here if you didn’t receive any link <br />
+            in 2 minutes
+          </p>
+          <button type="submit" class="btn btn-resend">Resend Link</button>
+          <p class="time">01:54</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-container">
+      <div class="left-foot-content">
+        <div class="logo-detail">
+          <img
+            src="/assets/coffee.png"
+            alt=""
+            class="coffee"
+            width="30"
+            height="33"
+          />
+          <p>Coffee Shop</p>
+        </div>
+        <p class="about-detail">
+          Coffee Shop is a store that sells some good <br />
+          meals, and especially coffee. We provide <br />
+          high quality beans
+        </p>
+        <div class="sosmed-detail">
+          <div class="box">
+            <div class="back-logo"></div>
+            <img class="img-logo" src="/assets/facebook.png" alt="" />
+          </div>
+          <div class="box">
+            <div class="back-logo"></div>
+            <img class="img-logo" src="/assets/twitter.png" alt="" />
+          </div>
+          <div class="box">
+            <div class="back-logo"></div>
+            <img class="img-logo" src="/assets/instagram.png" alt="" />
+          </div>
+        </div>
+        <p class="copyright">©2022 CoffeeStore</p>
+      </div>
+      <div class="right-foot-content">
+        <div class="content-detail">
+          <h2>Product</h2>
+          <ol>
+            <li>Download</li>
+            <li>Pricing</li>
+            <li>Locations</li>
+            <li>Contries</li>
+            <li>Blog</li>
+          </ol>
+        </div>
+        <div class="content-detail">
+          <h2>Engage</h2>
+          <ol>
+            <li>Coffee Shop ?</li>
+            <li>FAQ</li>
+            <li>About Us</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+          </ol>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="/forgot/forgot.js"></script>
+</html>
