@@ -6,11 +6,12 @@ const modal = document.getElementById("modal");
 const modalContent = document.getElementById("modal-content");
 const btnDelete = document.getElementById("ok");
 const btnCancel = document.getElementById("cancel");
+const delivered = document.querySelector(".deliver");
 
-const allCard = 15;
+const allCard = 16;
 
 const content = document.querySelector(".grid-hist");
-for (let i = 1; i <= allCard; i++) {
+for (let i = 2; i <= allCard; i++) {
   const cardArr = document.createElement("div");
 
   cardArr.classList.add("card");
@@ -18,8 +19,13 @@ for (let i = 1; i <= allCard; i++) {
   cardArr.innerHTML = card.innerHTML;
   content.appendChild(cardArr);
 
+  // const delivered = content.children[i];
+  // console.log(content);
+
   const options = document.createElement("div");
   options.classList.add("click-delete");
+
+  delivered.textContent = "Delivered " + i;
 
   const cardRemove = document.createElement("div");
   cardRemove.innerHTML = remove.innerHTML;
@@ -41,28 +47,45 @@ for (let i = 1; i <= allCard; i++) {
   cardRemove.addEventListener("click", function (event) {
     event.stopPropagation();
     // cardArr.style.display = "none";
-    modal.style.display = "flex";
-    content.dataset.cardId = i;
+    // modal.style.display = "flex";
+    // content.dataset.cardId = i;
+    // console.log(content.dataset.cardId);
+    content.removeChild(cardArr);
   });
 
   cardClose.addEventListener("click", function (event) {
     event.stopPropagation();
     options.style.display = "none";
     cardArr.style.backgroundColor = "#ffffff";
-    console.log("p");
+    // console.log("p");
   });
 }
 
-btnCancel.addEventListener("click", function (e) {
-  modal.style.display = "none";
-});
+// btnCancel.addEventListener("click", function (e) {
+//   modal.style.display = "none";
+// });
 
-btnDelete.addEventListener("click", function (e) {
-  e.stopPropagation();
-  modal.style.display = "none";
-  // content.children[content.dataset.cardId].style.display = "none";
-  content.removeChild(content.children[content.dataset.cardId]);
+// btnDelete.addEventListener("click", function (e) {
+//   e.stopPropagation();
+//   modal.style.display = "none";
+//   // content.children[content.dataset.cardId].style.display = "none";
+//   content.removeChild(content.children[content.dataset.cardId]);
+//   // console.log(content.children[content.dataset.cardId]);
+//   // const cardId = document.querySelector(".grid-hist .card")[0];
+//   // console.log(content.children[0]);
+// });
 
-  // const cardId = document.querySelector(".grid-hist .card")[0];
-  // console.log(content.children[0]);
+const burger = document.querySelector(".burger");
+const navToggle = document.querySelector(".nav-toggle");
+
+let showNavbar = false;
+burger.addEventListener("click", function () {
+  showNavbar = !showNavbar;
+  if (showNavbar) {
+    navToggle.style.display = "flex";
+    console.log(showNavbar);
+  } else {
+    navToggle.style.display = "none";
+    console.log(showNavbar);
+  }
 });

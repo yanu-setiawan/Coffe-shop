@@ -114,7 +114,9 @@
                 Do you want to save <br />
                 the change?
               </p>
-              <button class="btn btn-save">Save Change</button>
+              <button class="btn btn-save" onclick="validateForm();">
+                Save Change
+              </button>
               <button class="btn btn-cancel">Cancel</button>
               <button class="btn btn-logout">Log Out</button>
             </div>
@@ -134,14 +136,24 @@
                       id="email"
                       placeholder="Enter your email adrress"
                     />
+                    <span class="error" id=" email-error">
+                      <p class="error-text" id="errText">
+                        Please enter valid email
+                      </p>
+                    </span>
                   </div>
                   <div class="form-input">
                     <label>Delivery Adrress :</label>
                     <input
-                      id="deliveryAddres"
-                      type="email"
+                      id="deliveryAddress"
+                      type="text"
                       placeholder="Enter your delivery adrress"
                     />
+                    <span class="error" id=" email-error">
+                      <p class="error-text" id="errText">
+                        Please enter valid email
+                      </p>
+                    </span>
                   </div>
                 </div>
                 <div class="number">
@@ -152,6 +164,11 @@
                       type="email"
                       placeholder="Enter your mobile number"
                     />
+                    <span class="error" id=" email-error">
+                      <p class="error-text" id="errText">
+                        Please enter valid email
+                      </p>
+                    </span>
                   </div>
                 </div>
               </form>
@@ -165,9 +182,14 @@
                     <label>Display Name :</label>
                     <input
                       type="text"
-                      id="DisplayName"
+                      id="displayName"
                       placeholder="Enter your display name"
                     />
+                    <span class="error" id=" email-error">
+                      <p class="error-text" id="errText">
+                        Please enter valid email
+                      </p>
+                    </span>
                   </div>
                   <div class="form-input">
                     <label>First Name :</label>
@@ -176,6 +198,11 @@
                       id="firstName"
                       placeholder="Enter your first name"
                     />
+                    <span class="error" id=" email-error">
+                      <p class="error-text" id="errText">
+                        Please enter valid email
+                      </p>
+                    </span>
                   </div>
                   <div class="form-input">
                     <label>Last Name :</label>
@@ -184,12 +211,17 @@
                       id="lastName"
                       placeholder="Enter your last name"
                     />
+                    <span class="error" id=" email-error">
+                      <p class="error-text" id="errText">
+                        Please enter valid email
+                      </p>
+                    </span>
                   </div>
                 </div>
                 <div class="date"></div>
                 <div class="form-input">
                   <label>DD/MM/YY :</label>
-                  <input type="date" />
+                  <input type="date" id="date" />
                 </div>
               </form>
             </div>
@@ -197,16 +229,26 @@
             <div class="gender">
               <form class="gender-form">
                 <div class="male">
-                  <label class="container"
-                    >Male
-                    <input type="radio" checked="checked" name="radio" />
+                  <label class="container">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="radio"
+                      id="gender"
+                      value="Male"
+                    />Male
                     <span class="checkmark"></span>
                   </label>
                 </div>
                 <div class="female">
-                  <label class="container"
-                    >Female
-                    <input type="radio" checked="checked" name="radio" />
+                  <label class="container">
+                    <input
+                      type="radio"
+                      checked="checked"
+                      name="radio"
+                      id="gender"
+                      value="Female"
+                    />Female
                     <span class="checkmark"></span>
                   </label>
                 </div>

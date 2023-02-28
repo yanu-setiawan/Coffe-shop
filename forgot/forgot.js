@@ -16,12 +16,18 @@ function validateForm() {
   function setErrorFor(input, message) {
     const formInput = input.parentElement;
     // console.log(formInput);
+    // console.log(formInput);
     const errText = formInput.querySelector(".error");
-    errText.className = "form-input error";
+
+    // errText.className = "form-input  error";
+    errText.style.display = "flex";
     errText.innerText = message;
+
+    // console.log(errText);
   }
+
   if (email === "") {
-    return setErrorFor(emailInput, "Email tidak boleh kososng");
+    return setErrorFor(emailInput, "Email tidak boleh kosong");
   } else if (!emailRegex.test(email)) {
     return setErrorFor(emailInput, "Email tidak valid");
   } else {

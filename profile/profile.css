@@ -355,6 +355,17 @@ header {
   background-color: #fcc24d;
 }
 
+.error {
+  display: none;
+  /* visibility: visible; */
+  align-items: center;
+  font-size: 15px;
+  color: #d93025;
+  gap: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 5px;
+}
+
 .btn-logout {
   width: 207px;
   height: 60px;
