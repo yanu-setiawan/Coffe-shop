@@ -55,7 +55,8 @@ function validateForm() {
   if (email === "") {
     setErrorFor(email, "Email tidak boleh kosong");
     return;
-  } else if (!emailRegex.test(email)) {
+  }
+  if (!emailRegex.test(email)) {
     setErrorFor(email, "Email tidak valid");
     return;
   }
@@ -69,7 +70,8 @@ function validateForm() {
   if (phone === "") {
     setErrorFor(phoneInput, "Nomor tidak boleh kosong");
     return;
-  } else if (!phoneRegex.test(phone)) {
+  }
+  if (!phoneRegex.test(phone)) {
     setErrorFor(phoneInput, "nomor tidak valid");
     return;
   } else {

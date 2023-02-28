@@ -28,7 +28,8 @@ function validateForm() {
 
   if (email === "") {
     return setErrorFor(emailInput, "Email tidak boleh kosong");
-  } else if (!emailRegex.test(email)) {
+  }
+  if (!emailRegex.test(email)) {
     return setErrorFor(emailInput, "Email tidak valid");
   } else {
     error[0].style.display = "none";

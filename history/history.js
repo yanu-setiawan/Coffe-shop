@@ -46,11 +46,11 @@ for (let i = 2; i <= allCard; i++) {
 
   cardRemove.addEventListener("click", function (event) {
     event.stopPropagation();
+    content.removeChild(cardArr);
     // cardArr.style.display = "none";
     // modal.style.display = "flex";
     // content.dataset.cardId = i;
     // console.log(content.dataset.cardId);
-    content.removeChild(cardArr);
   });
 
   cardClose.addEventListener("click", function (event) {

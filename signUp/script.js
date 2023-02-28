@@ -22,7 +22,6 @@ function validateForm() {
 
   function setErrorFor(input, message) {
     const formInput = input.parentElement;
-    // console.log(formInput);
     const errText = formInput.querySelector(".error");
     errText.style.display = "flex";
     errText.className = "form-input error";
@@ -41,7 +40,8 @@ function validateForm() {
   if (email === "") {
     setErrorFor(emailInput, "Email tidak boleh kosong");
     return;
-  } else if (!emailRegex.test(email)) {
+  }
+  if (!emailRegex.test(email)) {
     setErrorFor(emailInput, "Email tidak valid");
     return;
   } else {
@@ -52,7 +52,8 @@ function validateForm() {
   if (password === "") {
     setErrorFor(passInput, "Password tidak boleh kosong");
     return;
-  } else if (password.length < 5) {
+  }
+  if (password.length < 5) {
     setErrorFor(passInput, "Pasword minimal 5 character");
     return;
   } else {
@@ -62,7 +63,8 @@ function validateForm() {
   if (phone === "") {
     setErrorFor(phoneInput, "Nomor tidak boleh kosong");
     return;
-  } else if (!phoneRegex.test(phone)) {
+  }
+  if (!phoneRegex.test(phone)) {
     setErrorFor(phoneInput, "nomor tidak valid");
     return;
   } else {

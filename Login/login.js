@@ -48,7 +48,8 @@ function validateFormLogin() {
   // Validasput email
   if (email === "") {
     return setErrorFor(emailInput, "Email tidak boleh kososng");
-  } else if (!emailRegex.test(email)) {
+  }
+  if (!emailRegex.test(email)) {
     return setErrorFor(emailInput, "Email tidak valid");
   } else {
     error[0].style.display = "none";
@@ -57,7 +58,8 @@ function validateFormLogin() {
 
   if (password === "") {
     return setErrorFor(passInput, "Password tidak boleh kosong");
-  } else if (password.length < 5) {
+  }
+  if (password.length < 5) {
     return setErrorFor(passInput, "Pasword minimal 5 character");
   } else {
     error[1].style.display = "none";

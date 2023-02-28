@@ -169,7 +169,7 @@ form {
   border: 1px solid #4f5665;
   font-size: 20px;
   font-weight: 400;
-  color: #9f9f9f;
+  color: #000000;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
